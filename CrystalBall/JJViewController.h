@@ -14,6 +14,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *predictionLabel;
 //Crystal Ball implementation
 @property (strong, nonatomic) JJCrystalBall *crystalBall;
-- (IBAction)buttonPressed;
-
+- (void) makePrediction; 
 @end

@@ -27,11 +27,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//Checks for the button to pressed then class the randomPrediction function
-- (IBAction)buttonPressed {
+#pragma - Prediction
+- (void) makePrediction{
     self.predictionLabel.text = [self.crystalBall randomPrediction];
 }
+
+#pragma - Motion Events
 
 //Resets the message when the user shakes the phone again
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
@@ -41,7 +42,7 @@
 //Triggers the randomPrediction function once the phone is shook
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     if ( motion == UIEventSubtypeMotionShake){
-        self.predictionLabel.text = [self.crystalBall randomPrediction];
+        [self makePrediction];
     }
 }
 
@@ -49,12 +50,13 @@
     //NSLog(@"Motion cancelled");
 }
 
+#pragma - Touch Events
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     self.predictionLabel.text = nil;
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    self.predictionLabel.text = [self.crystalBall randomPrediction];
+    [self makePrediction];
 }
 
 @end
