@@ -27,9 +27,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma - Prediction
 - (void) makePrediction{
     self.predictionLabel.text = [self.crystalBall randomPrediction];
+    
+    [UIView animateWithDuration:3.0 animations:^{
+        self.predictionLabel.alpha = 1.0f;
+    }];
 }
 
 #pragma - Motion Events
@@ -37,6 +42,7 @@
 //Resets the message when the user shakes the phone again
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     self.predictionLabel.text = nil;
+    self.predictionLabel.alpha = 0.0f;
 }
 
 //Triggers the randomPrediction function once the phone is shook
