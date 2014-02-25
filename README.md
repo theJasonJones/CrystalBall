@@ -8,3 +8,5 @@ This was a simple app that I created to get used to using:
 
 ##Screenshot
 ![Crystal Ball Screenshot](http://i.imgur.com/E44EJBL.png)
+
+This will serve as a starting point and a reference for future projects/assessment. 
