@@ -7,4 +7,4 @@ This was a simple app that I created to get used to using:
 - Objective-C
 
 ##Screenshot
-![Crystal Ball Screenshot](http://imgur.com/E44EJBL)
+![Crystal Ball Screenshot](http://i.imgur.com/E44EJBL.png)
